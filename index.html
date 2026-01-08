@@ -2,37 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Student Marks Table</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <h6>Your Name:</h6>
-        <input type="text" placeholder="Enter your name here">
-        <h6>Email:</h6>
-        <input type="text" placeholder="Enter your Email here">
-        <h6>Your Gender</h6>
-        <label for="male">
-            <input type="radio" value="Male" name="Gender" id="male">Male
-        </label>
-        <label for="female">
-            <input type="radio" value="Female" name="Gender" id="female">Female
-        </label>
-        <label for="other">
-            <input type="radio" value="Other" name="Gender" id="other">Other
-        </label>
-        <h6>Select Your City:</h6>
-        <select name="City" id="city">
-            <option value="Pune">Pune</option>
-            <option value="Pune">Mumbai</option>
-            <option value="Pune">Satara</option>
-            <option value="Pune">Sangli</option>
-            <option value="Pune">Kolhapur</option>
-            <option value="Pune">Nashik</option>
-            <option value="Pune">Nagpur</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+
+    <h1>Student Information</h1>
+
+    <table>
+        <caption>Student Marks Details</caption>
+
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Amit</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Neha</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Rahul</td>
+                <td>78</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Average Marks</td>
+                <td>84.33</td>
+            </tr>
+        </tfoot>
+    </table>
+
 </body>
 </html>

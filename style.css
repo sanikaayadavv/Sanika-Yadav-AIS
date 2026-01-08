@@ -1,0 +1,32 @@
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tbody {
+    background-color: #f2f2f2;
+}
+
+tfoot {
+    background-color: #ddd;
+    font-weight: bold;
+}
