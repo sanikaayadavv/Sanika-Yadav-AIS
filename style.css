@@ -1,32 +1,109 @@
-table {
-    width: 60%;
-    border-collapse: collapse;
-    margin: 20px;
-    font-family: Arial, sans-serif;
+*{
+    margin: 0px;
+    padding: 0px;
 }
-
-caption {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.tags{
+    color:azure;
+    background-color:#4a5759;
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
-
-th, td {
-    border: 2px solid #333;
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100px;
+    font-family:serif;
+    font-size:70px;
+}
+#box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    background-color:#b0c4b1;
+    color: black;
+    font-weight: 200;
+    height: 30px;
+    width: 150px;
+}
+.tags i{
+    font-size:30px;
+    color: black;
+}
+.content{
+    display: flex;
+    width: 100%;
+    gap:15px;
+}
+.one{
+    width:75%;
+    background-color:#dedbd2;
+    gap:15px;
+}
+.image{
+    background-image:url(image.jpg) ;
+    background-size: cover;
+    height: 626px;
+}
+.info{
+    font-family: 'Gill Sans';
+    padding-top: 10px;
+}
+.info2 p{
     padding: 10px;
-    text-align: center;
+    font-family: 'Gill Sans';
 }
-
-thead {
-    background-color: #4CAF50;
+.image2{
+    background-image:url(image2.jpg) ;
+    background-size: cover;
+    height: 626px;
+}
+h2{
+    padding-bottom: 10px;
+}
+.recent{
+    width: 25%;
+    background-color: #edafb8;
+}
+.recent h5{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.searchbar{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 5px;
+    height: 30px;
+}
+.place{
+    width:220px;
+}
+.search{
+    background-color: #4a5759;
     color: white;
 }
-
-tbody {
-    background-color: #f2f2f2;
+.recentpost{
+    padding-top: 30px;
+    padding-left: 20px;
 }
-
-tfoot {
-    background-color: #ddd;
-    font-weight: bold;
+.anchor{
+   padding-left: 20px; 
+   padding-top: 10px;
+   color:black;
+   text-decoration: #f7e1d7 solid underline;
+}
+footer{
+    display: flex;
+    background-color:#4a5759;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: azure;
+    margin-top: 15px;
 }
