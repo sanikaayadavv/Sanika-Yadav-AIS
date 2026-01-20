@@ -1,102 +1,107 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 /* Header */
 .header {
-    background-color: #4a5759;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Navigation */
-.navbar {
     display: flex;
-    justify-content: center;
-    background-color: #b0c4b1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: #f8f5f2;
+    border-bottom: 1px solid #ddd;
 }
 
-.navbar a {
-    padding: 15px 20px;
+.header h1 {
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.nav a {
+    margin-left: 20px;
     text-decoration: none;
-    color: black;
+    color: #444;
+    font-size: 15px;
 }
 
 /* Main Layout */
-.container {
+.layout {
     display: flex;
-    padding: 20px;
-    gap: 20px;
+    padding: 30px 40px;
+    min-height: 70vh;
+    gap: 30px;
 }
 
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: #fafafa;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* Content */
 .content {
     flex: 3;
 }
 
-.sidebar {
-    flex: 1;
-    background-color: #f4f4f4;
-    padding: 15px;
+.content h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
-/* Image Responsive */
-img {
-    width: 100%;
-    height: auto;
-    margin-top: 15px;
+.content p {
+    color: #555;
+    max-width: 600px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.card {
+    width: 30%;
+    background-color: #f1ede8;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
 }
 
 /* Footer */
 .footer {
-    background-color: #4a5759;
-    color: white;
     text-align: center;
-    padding: 10px;
-}
-
-/* TABLET VIEW (≤ 768px) */
-@media (max-width: 768px) {
-
-    .container {
-        flex-direction: column;
-    }
-
-    .navbar {
-        flex-wrap: wrap;
-    }
-
-    body {
-        font-size: 16px;
-    }
-}
-
-
-/* MOBILE VIEW */
-@media (max-width: 480px) {
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        padding: 10px;
-    }
-
-    body {
-        font-size: 14px;
-    }
-
-    .header h1 {
-        font-size: 22px;
-    }
+    padding: 20px;
+    background-color: #f8f5f2;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
 }
