@@ -6,29 +6,56 @@
 }
 
 .header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 25px 40px;
+    background-color: #f8f5f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Focus styles for keyboard users */
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #333;
+    outline-offset: 3px;
 }
 
 .container {
-    padding: 30px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 16px;
     cursor: pointer;
 }
 
-.info {
-    margin: 20px 0;
-    font-size: 16px;
-}
-
-#map {
-    height: 400px;
-    border-radius: 10px;
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f5f2;
 }
