@@ -1,49 +1,41 @@
-let map;
+const canvas = document.getElementById("board");
+const ctx = canvas.getContext("2d");
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
-}
+canvas.width = 700;
+canvas.height = 400;
 
-function showPosition(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
+let drawing = false;
 
-    document.getElementById("lat").textContent = latitude;
-    document.getElementById("lon").textContent = longitude;
+// Start drawing
+canvas.addEventListener("mousedown", () => {
+    drawing = true;
+    ctx.beginPath();
+});
 
-    // Initialize map only once
-    if (!map) {
-        map = L.map("map").setView([latitude, longitude], 13);
+// Stop drawing
+canvas.addEventListener("mouseup", () => {
+    drawing = false;
+});
 
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            attribution: "© OpenStreetMap contributors"
-        }).addTo(map);
+// Draw on canvas
+canvas.addEventListener("mousemove", (e) => {
+    if (!drawing) return;
 
-        L.marker([latitude, longitude])
-            .addTo(map)
-            .bindPopup("You are here")
-            .openPopup();
-    } else {
-        map.setView([latitude, longitude], 13);
-    }
-}
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-function showError(error) {
-    switch (error.code) {
-        case error.PERMISSION_DENIED:
-            alert("Location permission denied.");
-            break;
-        case error.POSITION_UNAVAILABLE:
-            alert("Location information is unavailable.");
-            break;
-        case error.TIMEOUT:
-            alert("Location request timed out.");
-            break;
-        default:
-            alert("An unknown error occurred.");
-    }
-}
+    ctx.lineWidth = 3;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "#333";
+
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+});
+
+// Clear canvas
+document.getElementById("clearBtn").addEventListener("click", () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
