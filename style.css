@@ -2,33 +2,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
 }
 
 .header {
     text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 30px;
+    background-color: #f8f5f2;
 }
 
 .container {
+    max-width: 550px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.task-input {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
+    gap: 10px;
 }
 
-canvas {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    cursor: crosshair;
+.task-input input {
+    flex: 1;
+    padding: 12px;
+    font-size: 15px;
 }
 
-.controls {
-    margin-top: 15px;
-}
-
-button {
-    padding: 8px 18px;
+.task-input button {
+    padding: 12px 20px;
     cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.filters button {
+    padding: 6px 14px;
+    cursor: pointer;
+    border: none;
+    background: #eaeaea;
+    border-radius: 20px;
+}
+
+.filters .active {
+    background: #333;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-left input {
+    cursor: pointer;
+}
+
+.actions button {
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 14px;
 }

@@ -2,22 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sketch Pad</title>
+    <title>Daily Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Sketch Pad</h1>
-        <p>Click and drag to draw</p>
+        <h1>Daily Planner</h1>
+        <p>Stay organized, one task at a time</p>
     </header>
 
     <main class="container">
-        <canvas id="board"></canvas>
 
-        <div class="controls">
-            <button id="clearBtn">Clear</button>
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="What needs to be done?">
+            <button id="addBtn">Add</button>
         </div>
+
+        <div class="filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="active">Active</button>
+            <button data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
     </main>
 
     <script src="script.js"></script>
