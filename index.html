@@ -2,32 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Daily Planner</title>
+    <title>Moments</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <h1>Daily Planner</h1>
-        <p>Stay organized, one task at a time</p>
+        <h1>Moments</h1>
+        <p>A small collection of captured scenes</p>
     </header>
 
-    <main class="container">
+    <main class="gallery">
 
-        <div class="task-input">
-            <input type="text" id="taskInput" placeholder="What needs to be done?">
-            <button id="addBtn">Add</button>
-        </div>
+        <figure class="photo">
+            <img src="sunset.jpg" alt="Sunset view">
+            <figcaption>Golden sunset</figcaption>
+        </figure>
 
-        <div class="filters">
-            <button data-filter="all" class="active">All</button>
-            <button data-filter="active">Active</button>
-            <button data-filter="completed">Completed</button>
-        </div>
+        <figure class="photo">
+            <img src="mountain_road.jpg" alt="Mountain road">
+            <figcaption>Mountain road</figcaption>
+        </figure>
 
-        <ul id="taskList"></ul>
+        <figure class="photo">
+            <img src="calm_lake.jpg" alt="Calm lake">
+            <figcaption>Quiet lake</figcaption>
+        </figure>
+
+        <figure class="photo">
+            <img src="city_lights.jpg" alt="City lights">
+            <figcaption>City lights</figcaption>
+        </figure>
 
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img">
+        <p id="lightbox-caption"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>
