@@ -2,46 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Moments</title>
+    <title>Bloom</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
     <header class="header">
-        <h1>Moments</h1>
-        <p>A small collection of captured scenes</p>
+        <h1>Bloom</h1>
+        <nav aria-label="Primary navigation">
+            <a href="#">Home</a>
+            <a href="#">Stories</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
-    <main class="gallery">
+    <!-- Main -->
+    <main id="main-content" tabindex="-1">
 
-        <figure class="photo">
-            <img src="sunset.jpg" alt="Sunset view">
-            <figcaption>Golden sunset</figcaption>
-        </figure>
+        <section class="intro">
+            <img src="grass.jpg" alt="Soft sunlight over green plants">
+            <p>
+                A quiet space for simple moments, gentle ideas, and everyday calm.
+            </p>
+        </section>
 
-        <figure class="photo">
-            <img src="mountain_road.jpg" alt="Mountain road">
-            <figcaption>Mountain road</figcaption>
-        </figure>
+        <!-- Contact Form -->
+        <section class="contact">
+            <h2>Write to us</h2>
 
-        <figure class="photo">
-            <img src="calm_lake.jpg" alt="Calm lake">
-            <figcaption>Quiet lake</figcaption>
-        </figure>
+            <form id="contactForm" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" required>
+                </div>
 
-        <figure class="photo">
-            <img src="city_lights.jpg" alt="City lights">
-            <figcaption>City lights</figcaption>
-        </figure>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+
+                <p id="formMessage" role="alert" aria-live="polite"></p>
+
+                <button type="submit">Send message</button>
+            </form>
+        </section>
 
     </main>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="close">&times;</span>
-        <img id="lightbox-img">
-        <p id="lightbox-caption"></p>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Bloom</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

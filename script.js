@@ -1,28 +1,29 @@
-const photos = document.querySelectorAll(".photo img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const lightboxCaption = document.getElementById("lightbox-caption");
-const closeBtn = document.querySelector(".close");
+const form = document.getElementById("contactForm");
+const messageBox = document.getElementById("formMessage");
+const mainContent = document.getElementById("main-content");
 
-// Open lightbox
-photos.forEach(photo => {
-    photo.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = photo.src;
-        lightboxCaption.textContent = photo.nextElementSibling.textContent;
-    });
+/* Move focus when skip link is used */
+document.querySelector(".skip-link").addEventListener("click", () => {
+    mainContent.focus();
 });
 
-// Close lightbox
-closeBtn.addEventListener("click", closeLightbox);
-lightbox.addEventListener("click", e => {
-    if (e.target === lightbox) closeLightbox();
-});
+/* Accessible form validation */
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeLightbox();
-});
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
 
-function closeLightbox() {
-    lightbox.style.display = "none";
-}
+    if (!name.value || !email.value || !message.value) {
+        messageBox.textContent = "Please fill in all fields.";
+        messageBox.style.color = "red";
+        messageBox.focus();
+        return;
+    }
+
+    messageBox.textContent = "Message sent successfully!";
+    messageBox.style.color = "green";
+
+    form.reset();
+});
